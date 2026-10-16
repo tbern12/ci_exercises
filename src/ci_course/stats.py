@@ -44,7 +44,7 @@ def count_missing(values):
 
     Parameters
     __________
-    values : array_like 
+    values : array_like
 
     Returns
     _______
