@@ -41,4 +41,3 @@ def test_summarise_empty_array():
 def test_summarsie_array_of_one():
     summary = ci_course.summarise(np.array([1]))
     assert summary["sd"] == 0
-    
