@@ -31,7 +31,7 @@ def test_counts_missing_values():
     assert ci_course.count_missing(np.array([1.0, 2.0])) == 0
 
 def test_summarise_empty_array():
-    summary = ci_course.summarise(np.array())
+    summary = ci_course.summarise(np.array([]))
     assert summary["n"] == 0
     assert summary["mean"] == 0
     assert summary["sd"] == 0
