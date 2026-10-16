@@ -38,6 +38,6 @@ def test_summarise_empty_array():
     assert summary["min"] == 0
     assert summary["max"] == 0
 
-def test_summarsie_array_of_one():
+def test_summarise_array_of_one():
     summary = ci_course.summarise(np.array([1]))
     assert summary["sd"] == 0
