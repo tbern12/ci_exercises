@@ -29,7 +29,7 @@ def test_reads_a_file_given_by_path(tmp_path):
 
 def test_load_value_error(tmp_path):
     csv = tmp_path /"bad_csv.csv"
-    csv.write_text("sample_id, height_m\nA, 1.5\n B, string", encoding = "utf-8")
+    csv.write_text("sample_id,height_m\nA, 1.5\n B, string", encoding = "utf-8")
 
     errors = []
     data = ci_course.load_measurements(path = csv, errors = errors)
