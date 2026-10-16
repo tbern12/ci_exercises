@@ -43,11 +43,11 @@ def count_missing(values):
     Count the number of nan values in an array
 
     Parameters
-    __________
+    ----------
     values : array_like
 
     Returns
-    _______
+    -------
     int
         The number of nan values in the values array
     """
