@@ -40,7 +40,7 @@ def load_measurements(path=None, errors=None):
     dict
         A mapping of column name to :class:`numpy.ndarray` of float.
     """
-    if errors = None:
+    if errors is None:
         errors = []
     if path is None:
         path = sample_data_path()
