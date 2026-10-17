@@ -1,5 +1,5 @@
 Quickstart Guide
-=============
+================
 
 *How to use:*
 
