@@ -1,0 +1,28 @@
+name: Pre-Commit Files
+
+  on:
+    push:
+      branches: ["main"]
+    pull-request:
+      branches: ["main"]
+    workflow-dispatch: 
+
+  jobs:
+    pre-commit:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Checkout
+        uses: actions/check-out@v7
+  
+      - name: Set Up Python 3.13
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+  
+      - name: Install Dependencies
+        run: |
+          python -m pip install .[dev]
+  
+      - name: Run Pre-Commit
+        run: |
+          pre-commit run --all-files
