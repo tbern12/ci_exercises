@@ -16,12 +16,3 @@ summarised_data_dictionary = cic.summarise_all(your_dictionary)
 To write a report on the data:
 
 path_to_report = write_report(summarised_data_dictionary, path_to_report)
-
-
-
- 
-
-
-
-
-

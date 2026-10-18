@@ -35,5 +35,3 @@ def test_load_value_error(tmp_path):
     data = ci_course.load_measurements(path = csv, errors = errors)
     assert np.isnan(data["height_m"][1])
     assert len(errors)>0
-
-
