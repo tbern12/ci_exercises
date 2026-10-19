@@ -1,0 +1,32 @@
+name: Review Documentation
+on:
+  pull_request: 
+    branches: ["main"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  docs-prevew:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v7
+    - name: Setup Python 3.13
+      uses: actions/setup-python@v7
+      with:
+        python-version: "3.13"
+    - name: Install Dependencies
+      run: |
+        python -m pip install .[docs]
+    - name: Build Sphinx html
+      run: |
+        sphinx-build -W -b html docs docs/_build/html
+        
+    - uses: actions/upload-pages-artifact@v5
+      with:
+        name: documentation-preview
+        path: docs/_build/html
+        if-no-files-found: error
+        retention-days: 7
+    
+      
