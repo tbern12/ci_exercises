@@ -8,7 +8,7 @@ import numpy as np
 
 def sample_data_path():
     """
-    Return the path to the sample measurements bundled with the package.
+    Return the path to the sample measurements bundled with the package. THIS IS NEW TEXT IN THE DOCUMENTATION
 
     Returns
     -------
